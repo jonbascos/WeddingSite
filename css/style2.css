@@ -1,0 +1,180 @@
+@font-face {
+  font-family: MyFont;
+  src: url(../digital.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  color: #fff;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5))), url('../img/background.jpeg');
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('../img/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+}
+
+.beckyAndI {
+  padding-top: 10px;
+  height: 175px;
+  width: 175px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+  font-weight: bolder;
+  width: 100%;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #117EA6;
+  text-transform: uppercase;
+}
+
+/* Info Window */
+
+.infoContainer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5)));
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5));
+  width: 70%;
+  max-width: 300px;
+  height: 65%;
+  margin: 10px auto;
+  padding: 20px;
+}
+
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.ourNames {
+  color: #EDE9C3;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.8em;
+  letter-spacing: 4px;
+}
+
+.theDate {
+  color: #ccc;
+  font-family: 'Indie Flower', cursive;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
+.location {
+  font-family: 'Lobster', cursive;
+  font-size: 1.2em;
+  color: #73FFE3;
+}
+
+.location a {
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.location a:visited {
+  color: inherit;
+}
+
+/* Timer */
+
+.countdownContainer {
+  width: 75%;
+  max-width: 250px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 12px;
+  background-color: #fff;
+  opacity: 0.7;
+  border: 2px solid black;
+  font-family: sans-serif;
+  -webkit-box-shadow: 0 0 5px 3px #999;
+  box-shadow: 0 0 5px 3px #999;
+  color: black;
+}
+
+.countdownContainer h2 {
+  margin-bottom: 5px;
+  color: red;
+}
+
+.timerContainer,
+.timerLabelsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
+                  -ms-flex-pack: distribute;
+                      justify-content: space-around;
+}
+
+.timerContainer {
+  font-family: MyFont;
+}
