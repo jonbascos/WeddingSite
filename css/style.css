@@ -1,31 +1,37 @@
+@font-face {
+  font-family: MyFont;
+  src: url(../digital.ttf);
+}
+
 * {
   margin: 0;
   padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #117EA6;
-}
-
-a:visited {
-  color: #117EA6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 16px;
 }
 
 body {
-  background-image: url('../img/background.jpeg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: auto;
+  color: #fff;
 }
 
 .container {
   position: absolute;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5))), url('../img/background.jpeg');
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('../img/background.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
 }
 
 .beckyAndI {
@@ -35,60 +41,56 @@ body {
   display: block;
   margin: 0 auto;
   border-radius: 50%;
+  opacity: 0.8;
 }
 
-nav {
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
-  margin-top: 10px;
-  font-family: 'Indie Flower', cursive;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 nav li {
   list-style: none;
-  width: 100%;
-  display: block;
-}
-
-nav li:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
 }
 
 nav li a {
-  color: #117EA6;
-  font-size: 2em;
-  font-weight: bold;
-}
-
-.sectionContainer {
-  margin: 0 1em;
-  font-size: 1.2em;
-  line-height: 1.2em;
-}
-
-.title h1 {
-  text-decoration: underline;
-  margin: 10px 0;
-  color: red;
-  text-align: center;
-}
-
-.toTheTop {
+  color: #ccc;
+  text-decoration: none;
   display: block;
-  margin: 10px auto;
-  align-text: center;
-  color: red;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5em;
+  font-weight: bolder;
+  width: 100%;
 }
-/* Wedding Info */
+
+nav a:hover {
+  text-decoration: underline;
+  color: #117EA6;
+  text-transform: uppercase;
+}
+
+/* Info Window */
+
+.infoContainer {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5)));
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5));
+  width: 70%;
+  max-width: 300px;
+  height: 65%;
+  margin: 10px auto;
+  padding: 20px;
+}
 
 .info {
   display: -webkit-box;
@@ -104,34 +106,75 @@ nav li a {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px;
-  margin-top: 20px;
-  background-color: rgba(129, 158, 161, 0.5);
-}
-
-.ourNames,
-.theDate,
-.location {
-  font-family: 'Caveat', cursive;
-  color: #F5EFCB;
 }
 
 .ourNames {
-  font-size: 3em;
+  color: #EDE9C3;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.8em;
+  letter-spacing: 4px;
 }
 
-.theDate,
+.theDate {
+  color: #ccc;
+  font-family: 'Indie Flower', cursive;
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+
 .location {
-  font-size: 2em;
+  font-family: 'Lobster', cursive;
+  font-size: 1.2em;
+  color: #73FFE3;
 }
 
-.location,
 .location a {
-  color: rgb(7, 235, 242);
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
-/* Our Story */
+.location a:visited {
+  color: inherit;
+}
 
-.ourStoryContent {
+/* Timer */
 
+.countdownContainer {
+  width: 75%;
+  max-width: 250px;
+  margin: 50px auto;
+  text-align: center;
+  padding: 12px;
+  background-color: #fff;
+  opacity: 0.7;
+  border: 2px solid black;
+  font-family: sans-serif;
+  -webkit-box-shadow: 0 0 5px 3px #999;
+  box-shadow: 0 0 5px 3px #999;
+  color: black;
+}
+
+.countdownContainer h2 {
+  margin-bottom: 5px;
+  color: red;
+}
+
+.timerContainer,
+.timerLabelsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+          -webkit-box-flex: 1;
+              -ms-flex-positive: 1;
+                  flex-grow: 1;
+                  -ms-flex-pack: distribute;
+                      justify-content: space-around;
+}
+
+.timerContainer {
+  font-family: MyFont;
 }
