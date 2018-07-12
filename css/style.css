@@ -15,9 +15,19 @@ body {
   color: #fff;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
+.toTheTop {
+  padding: 10px;
+}
+
+.toTheTop a {
+  text-decoration: none;
+}
+
+.toTheTop a:hover {
+  text-transform: uppercase;
+  text-decoration: underline;
+  -webkit-text-decoration-color: red;
+          text-decoration-color: red;
 }
 
 .container {
@@ -198,7 +208,7 @@ nav a:hover {
 /* Our Story */
 
 .ourStoryContainer {
-  height: 800px;
+  height: 850px;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5))), url('../img/holdingHands.jpeg');
   background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('../img/holdingHands.jpeg');
