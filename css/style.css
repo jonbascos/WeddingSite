@@ -15,6 +15,11 @@ body {
   color: #fff;
 }
 
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   position: absolute;
   top: 0;
@@ -24,7 +29,7 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  height: 800px;
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5))), url('../img/background.jpeg');
   background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('../img/background.jpeg');
@@ -62,6 +67,8 @@ nav ul {
 
 nav li {
   list-style: none;
+  width: 100%;
+  text-align: center;
 }
 
 nav li a {
@@ -72,6 +79,7 @@ nav li a {
   font-size: 1.5em;
   font-weight: bolder;
   width: 100%;
+  padding: 5px;
 }
 
 nav a:hover {
@@ -79,6 +87,8 @@ nav a:hover {
   color: #117EA6;
   text-transform: uppercase;
 }
+
+
 
 /* Info Window */
 
@@ -108,22 +118,27 @@ nav a:hover {
   flex-direction: column;
 }
 
+.ourNames,
+.theDate,
+.location,
+.ourStory {
+  font-family: 'Indie Flower', cursive;
+}
+
 .ourNames {
   color: #EDE9C3;
-  font-family: 'Indie Flower', cursive;
+
   font-size: 1.8em;
   letter-spacing: 4px;
 }
 
 .theDate {
   color: #ccc;
-  font-family: 'Indie Flower', cursive;
   text-transform: uppercase;
   font-size: 1.2em;
 }
 
 .location {
-  font-family: 'Lobster', cursive;
   font-size: 1.2em;
   color: #73FFE3;
 }
@@ -131,6 +146,7 @@ nav a:hover {
 .location a {
   text-decoration: none;
   font-size: 1.2em;
+  color: #73FFE3;
 }
 
 .location a:visited {
@@ -177,4 +193,46 @@ nav a:hover {
 
 .timerContainer {
   font-family: MyFont;
+}
+
+/* Our Story */
+
+.ourStoryContainer {
+  height: 800px;
+  width: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(26, 26, 26, 0.5)), to(rgba(26, 26, 26, 0.5))), url('../img/holdingHands.jpeg');
+  background: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url('../img/holdingHands.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.ourStoryContent {
+  margin: 0 1em;
+  color: rgb(220, 222, 219);
+  font-family: sans-serif;
+
+}
+
+.ourStoryHeading {
+  display: inline-block;
+  text-decoration: underline;
+  color: rgb(251, 175, 255);
+  margin: 10px;
+  font-size: 2em;
+  font-family: 'Caveat', cursive ;
+}
+
+.question,
+.answer {
+  margin: 10px;
+}
+
+.question {
+  text-decoration: underline;
+}
+
+.answer,
+.answer li {
+  margin-left: 20px;
 }
